@@ -209,12 +209,27 @@ submitBTN.addEventListener("click", () => {
   let wordList = document.getElementById("results");
   wordList.innerHTML = "";
   for (let i = 0; i < possibles.length; i++) {
-      wordList.innerHTML += `<li class="list-possibles">${possibles[i]}</li>`;
+    fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${possibles[i]}`)
+          .then(response => {
+            return response.json();
+          })
+          .then(data => {
+            //console.log(data[0].meanings[0].definitions[0].definition);
+            let text = "";
+            if (data.title === "No Definitions Found") {
+              text = data.title;
+            } else {
+              text = `Definition: ${data[0].meanings[0].definitions[0].definition}`;
+            wordList.innerHTML += `<li class="list-possibles" title="${text}">${possibles[i]}</li>`;
+            }
+          })
+      //wordList.innerHTML += `<li class="list-possibles">${possibles[i]}</li>`;
   }
   document.getElementById("total").innerHTML = `Number of Results: ${possibles.length}`;
   addPastGuess();
   setInputFields();
   $('#results-section').removeClass("d-none");
+  //addListListener();
 });
 
 var elts = document.getElementsByClassName('for-sure');
@@ -227,4 +242,21 @@ var elts = document.getElementsByClassName('for-sure');
         elts[i+1].focus();
       }
     });
+  }
+
+  function addListListener() {
+    var eltss = document.querySelectorAll('.list-possibles');
+    eltss.forEach(item => {
+      item.addEventListener("mouseover", event => {
+        fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${item.innerHTML}`)
+          .then(response => {
+            return response.json();
+          })
+          .then(data => {
+            console.log(data[0].meanings[0].definitions[0].definition);
+            let text = `Definition: data[0].meanings[0].definitions[0].definition`
+            item.setAttribute('title', text);
+          })
+      })
+    })
   }

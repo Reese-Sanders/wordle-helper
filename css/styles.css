@@ -100,6 +100,11 @@ h2, h3, h4, h5 {
   color: rgba(0, 0, 0, .5);
 }
 
+.hint {
+  font-size: 24px;
+  color: rgba(0, 0, 0, .5);
+}
+
 section {
   padding:15px 0;
 }
