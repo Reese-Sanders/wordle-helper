@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Wordle Helper</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="	https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="page-container">
+      <div id="content-wrap">
+        <nav class="navbar navbar-light">
+          <div class="container-fluid container">
+            <span class="navbar-brand mb-0 h1 nav-title">Wordle Helper<br><span class="sub-nav-text">For all you cheaters</span></span>
+            
+          </div>
+        </nav>
+        <section id="past-guess-section" class="d-none">
+          <div class="container">
+            <div id="past-guess" class="pt-5">
+              <h2 class="text-center accent-header">Past Guesses</h2>
+              <div
+                class="d-flex flex-row justify-content-center align-items-center my-5 guess-row"
+              >
+                <h3 class="px-2">Guess 1</h3>
+                <div class="correct rounded mx-2">
+                  <p class="guessedContent">C</p>
+                </div>
+                <div class="letter rounded mx-2">
+                  <p class="guessedContent">C</p>
+                </div>
+                <div class="incorrect rounded mx-2">
+                  <p class="guessedContent">C</p>
+                </div>
+                <div class="correct rounded mx-2">
+                  <p class="guessedContent">C</p>
+                </div>
+                <div class="correct rounded mx-2">
+                  <p class="guessedContent">C</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="current-guess-section">
+          <div class="container">
+            <form>
+              <h2 class="text-center mt-5">Current Guess</h2>
+              <div
+                class="d-flex flex-row justify-content-center my-5 flex-wrap flex-md-nowrap"
+              >
+              <div class="button-descript d-none d-sm-block">
+                <p>Correct</p>
+                <p>Correct Letter</p>
+                <p>Incorrect</p>
+              </div>
+                <div class="mb-5">
+                  
+                  <input
+                    type="text"
+                    class="form-control for-sure text-center mx-2"
+                    placeholder="c"
+                    id="letter0"
+                    maxlength="1"
+                  />
+                  <div class="form-check mx-4">
+                    
+                    <input
+                      class="form-check-input radio-correct"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="flexRadioDefault0"
+                    />
+                    
+                  </div>
+                  <div class="form-check mx-4">
+                    <input
+                      class="form-check-input radio-letter"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="flexRadioDefault1"
+                    />
+                    
+                  </div>
+                  <div class="form-check mx-4">
+                    <input
+                      class="form-check-input radio-incorrect"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="flexRadioDefault2"
+                      checked
+                    />
+                  </div>
+                </div>
+
+                <div class="mb-5">
+                  <input
+                    type="text"
+                    class="form-control for-sure text-center mx-2"
+                    placeholder="r"
+                    id="letter1"
+                    maxlength="1"
+                  />
+                  <div class="form-check mx-4">
+                    <input
+                      class="form-check-input radio-correct"
+                      type="radio"
+                      name="flexRadioDefault1"
+                      id="flexRadioDefault3"
+                    />
+                  </div>
+                  <div class="form-check mx-4">
+                    <input
+                      class="form-check-input radio-letter"
+                      type="radio"
+                      name="flexRadioDefault1"
+                      id="flexRadioDefault4"
+                    />
+                  </div>
+                  <div class="form-check mx-4">
+                    <input
+                      class="form-check-input radio-incorrect"
+                      type="radio"
+                      name="flexRadioDefault1"
+                      id="flexRadioDefault5"
+                      checked
+                    />
+                  </div>
+                </div>
+
+                <div class="mb-5">
+                  <input
+                    type="text"
+                    class="form-control for-sure text-center mx-2"
+                    placeholder="a"
+                    id="letter2"
+                    maxlength="1"
+                  />
+                  <div class="form-check mx-4">
+                    <input
+                      class="form-check-input radio-correct"
+                      type="radio"
+                      name="flexRadioDefault2"
+                      id="flexRadioDefault6"
+                    />
+                  </div>
+                  <div class="form-check mx-4">
+                    <input
+                      class="form-check-input radio-letter"
+                      type="radio"
+                      name="flexRadioDefault2"
+                      id="flexRadioDefault7"
+                    />
+                  </div>
+                  <div class="form-check mx-4">
+                    <input
+                      class="form-check-input radio-incorrect"
+                      type="radio"
+                      name="flexRadioDefault2"
+                      id="flexRadioDefault8"
+                      checked
+                    />
+                  </div>
+                </div>
+
+                <div class="mb-5">
+                  <input
+                    type="text"
+                    class="form-control for-sure text-center mx-2"
+                    placeholder="n"
+                    id="letter3"
+                    maxlength="1"
+                  />
+                  <div class="form-check mx-4">
+                    <input
+                      class="form-check-input radio-correct"
+                      type="radio"
+                      name="flexRadioDefault3"
+                      id="flexRadioDefault9"
+                    />
+                  </div>
+                  <div class="form-check mx-4">
+                    <input
+                      class="form-check-input radio-letter"
+                      type="radio"
+                      name="flexRadioDefault3"
+                      id="flexRadioDefault10"
+                    />
+                  </div>
+                  <div class="form-check mx-4">
+                    <input
+                      class="form-check-input radio-incorrect"
+                      type="radio"
+                      name="flexRadioDefault3"
+                      id="flexRadioDefault11"
+                      checked
+                    />
+                  </div>
+                </div>
+
+                <div class="mb-5">
+                  <input
+                    type="text"
+                    class="form-control for-sure text-center mx-2"
+                    placeholder="e"
+                    id="letter4"
+                    maxlength="1"
+                  />
+                  <div class="form-check mx-4">
+                    <input
+                      class="form-check-input radio-correct"
+                      type="radio"
+                      name="flexRadioDefault4"
+                      id="flexRadioDefault12"
+                    />
+                  </div>
+                  <div class="form-check mx-4">
+                    <input
+                      class="form-check-input radio-letter"
+                      type="radio"
+                      name="flexRadioDefault4"
+                      id="flexRadioDefault13"
+                    />
+                  </div>
+                  <div class="form-check mx-4">
+                    <input
+                      class="form-check-input radio-incorrect"
+                      type="radio"
+                      name="flexRadioDefault4"
+                      id="flexRadioDefault14"
+                      checked
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex flex-row justify-content-center my-5">
+                <button
+                  type="button"
+                  class="btn btn-primary mx-auto"
+                  id="submit-btn"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+        <section id="results-section" class="d-none py-5">
+          <div class="container mb-5">
+            <h2 id="total" class="text-center mb-5 results-header"></h2>
+            <div class="d-flex justify-content-center">
+              <ul id="results" class="mx-auto"></ul>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer id="footer">
+        <div class="container text-center">
+          <p><a href="#">GitHub Link</a></p>
+        </div>
+      </footer>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
+      integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script text="type/javascript" src="js/script.js"></script>
+  </body>
+</html>
